@@ -1,0 +1,61 @@
+A horizontal gallery of images.
+Images displayed next to each other.
+Users can glide (drag) or use arrows to move between the images.
+
++---------------------+
+|       User          |
++---------------------+
+| - userId: String    |
+| - name: String      |
+| - email: String     |
+| - role: String      |
++---------------------+
+| + reserveRoom(Room, Date, Date): Reservation |
+| + cancelReservation(Reservation): void        |
++---------------------+
+
+                |
+                | 1
+                |
+                | *
++---------------------+
+|    Reservation      |
++---------------------+
+| - reservationId: String  |
+| - startDate: Date        |
+| - endDate: Date          |
+| - status: String         |
++---------------------+
+| + updateStatus(String): void |
++---------------------+
+
+                | *
+                | 
+                | 1
++-------------------------------------------------------+
+|                        Room                           |
++-------------------------------------------------------+
+| - roomId: String                                      |
+| - roomName: String                                    |
+| - capacity: int                                       |  // Maximum number of people the room can hold
+| - location: String                                    |  // Building, wing, or floor location of the room
+| - type: String                                        |  // e.g., meeting room, conference room, office
+| - roomSize: double                                    |  // Room size in square meters
+| - seatingArrangement: String                          |  // e.g., boardroom, theater, classroom
+| - equipment: List<String>                             |  // e.g., projector, whiteboard, TV, videoconferencing
+| - pricePerHour: double                                |  // Cost per hour for reservation
+| - floor: int                                          |  // Floor number
+| - availabilityStatus: String                          |  // e.g., available, occupied, under maintenance
+| - reservationHistory: List<Reservation>               |  // List of past reservations
+| - createdAt: Date                                     |  // Date when the room was created
+| - updatedAt: Date                                     |  // Last updated date
+| - isAccessible: boolean                               |  // Indicates if the room is wheelchair accessible
+| - parkingAvailable: boolean                           |  // Indicates if parking is available nearby
+| - wifiAvailability: boolean                           |  // Indicates if Wi-Fi is available in the room
+| - powerOutlets: int                                   |  // Number of power outlets available in the room
++-------------------------------------------------------+
+| + isAvailable(Date, Date): boolean                    |  // Checks if the room is available during a given time slot
+| + getReservationHistory(): List<Reservation>          |  // Retrieves past reservations for the room
+| + reserveRoom(User, Date, Date): Reservation          |  // Reserve the room for a user
+| + updateRoomStatus(String): void                      |  // Updates the status of the room
++-------------------------------------------------------+

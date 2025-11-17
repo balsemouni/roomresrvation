@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-image: url("./images/Simon-Kucher-2-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* vh for full viewport height */
+    width: 100vw; /* vw for full viewport width */
+
+    /* Optional background color if the image does not fully cover */
+    /* background-color: #23242a; */
+}
+
+.box {
+    position: relative;
+    width: 25rem;
+    height: 31rem;
+    /* background: #1c1c1c; */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@keyframes animate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: transparent;
+    background-color: #A0C8D2;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2{
+color: #fff;
+font-weight: 500;
+text-align: center;
+letter-spacing: 0.1rem;
+}
+.box form .inputbox{
+    position: relative
+    ;
+    width: 300px;
+    margin-top: 35px;
+
+}
+.box form .inputbox input{
+    position: relative
+    ;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.box form .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.box form .inputbox input:valid~span,
+.box form .inputbox input:focus~span{
+color: #fff;
+font-size: 0.75em;
+transform: translateY(-34px);
+}
+.box form .inputbox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    overflow: hidden;
+}
+.box form .inputbox input:valid~i,
+.box form .inputbox input:valid~i{
+    height: 44px;
+}
+.box form .links{
+    display: flex;
+    justify-content: space-between;
+}
+.box form .links a{
+    margin: 10px 0;
+    font-size: 1em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+p{
+        margin: 10px 0;
+        font-size: 1em;
+        color: #8f8f8f;
+        text-decoration: none;
+
+}
+.box form .links a:hover
+.box form .links a:nth-child(2){
+    color: #fff;
+}
+.box form .b{
+ border: none;   
+ text-decoration: none;
+ color: #222;
+ outline: none;
+ padding: 9px 25px;
+ background: #fff;
+ cursor: pointer;
+ font-size: 0.9em;
+ font-weight: 600;
+ width: 100px;
+ margin-top: 10px;
+}
+
+.button-link {
+    margin-top:1.5rem ;
+    position: relative;
+    left: 7rem;
+    padding: 10px;
+    border: none;
+    color: white;
+    justify-content: center;
+    width: 10rem;
+    height: auto;
+    text-align: center;
+    background: linear-gradient(90deg,#d1b8a8 ,#cab9a7,#d0b7a7,#bfa99d,#bfa99d);
+    background-size: 200%;
+  
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .button-link:hover {
+    animation: animation 5s linear infinite;
+  }
+  @keyframes animation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+  .button-link::before {
+    content: "";
+    position: relative;
+    top: -5px;
+    left: 5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+    background: linear-gradient(90deg,#cab9a7,#cab9a9,#cab9b0,#cab9c9);
+  }
+  .button-link:hover::before {
+    filter: blur(20px);
+  }

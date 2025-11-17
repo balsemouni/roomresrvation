@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Reservation Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="reservation-container">
+    <div class="reservation-header">
+      <h2>Room Reservation Form</h2>
+    </div>
+
+    <!-- Room Details Section -->
+    <div class="room-details">
+      <h3>Room: Conference Room A</h3>
+      <img src="../images/Simon-Kucher-2-2.jpg" alt="">
+      <div class="room-specs">
+        <p><strong>Capacity:</strong> <span>20 people</span></p>
+        <p><strong>Location:</strong> <span>2nd Floor, Building A</span></p>
+        <p><strong>Available Equipment:</strong> <span>Projector, Laptop</span></p>
+        <p><strong>Wi-Fi:</strong> <span>Available</span></p>
+      </div>
+    </div>
+
+    <!-- Reservation Form -->
+    <form class="reservation-form" action="#" method="post" id="reservation-form">
+      <div class="form-group">
+        <label for="date">Select Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="start-time">Select Start Time</label>
+        <select id="start-time" name="start-time" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="end-time">Select End Time</label>
+        <select id="end-time" name="end-time" required></select>
+      </div>
+
+      <button type="submit" class="submit-button">Reserve Room</button>
+      <p id="error-message" style="color: red; display: none;">Start time must be earlier than end time.</p>
+    </form>
+  </div>
+
+  <script>
+    // Populate time dropdown with options from 8:00 to 17:00 every hour
+    function populateTimeOptions(id) {
+      const select = document.getElementById(id);
+      for (let hour = 8; hour <= 17; hour++) {
+        const timeString = hour < 10 ? `0${hour}:00` : `${hour}:00`;
+        const option = document.createElement('option');
+        option.value = timeString;
+        option.textContent = timeString;
+        select.appendChild(option);
+      }
+    }
+
+    // Initialize time options
+    populateTimeOptions('start-time');
+    populateTimeOptions('end-time');
+
+    // Form validation for start time and end time
+    document.getElementById('reservation-form').addEventListener('submit', function(event) {
+      const startTime = document.getElementById('start-time').value;
+      const endTime = document.getElementById('end-time').value;
+
+      if (startTime >= endTime) {
+        event.preventDefault();  // Prevent form submission
+        document.getElementById('error-message').style.display = 'block';
+      } else {
+        document.getElementById('error-message').style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

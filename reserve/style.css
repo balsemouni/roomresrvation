@@ -1,0 +1,228 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #e9eff1; /* Soft Blue Background */
+  }
+  
+  .reservation-container {
+    width: 50%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .reservation-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .reservation-header h2 {
+    color: #2a4d63; /* Dark Blue */
+  }
+  
+  .room-details {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr; */
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  .room-details img{
+    width: 100%;
+    height: 10rem;
+  }
+  
+  .room-details h3 {
+    grid-column: span 2;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a4d63; /* Dark Blue */
+    text-align: center;
+  }
+  
+  .room-specs p {
+    font-size: 16px;
+    color: #666666; /* Medium Gray */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .room-specs p strong {
+    color: #A68768; /* Bright Orange */
+  }
+  
+  .reservation-form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  
+  .form-group select:focus,
+  .form-group input:focus {
+    border-color: #A0C8D2; /* Focus color */
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #A68768; /* Bright Orange */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #A0C8D2; /* Darker Orange */
+  }
+  
+  /* Importing Google Font - Montserrat */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+  }
+  
+  .user-name {
+    color: #071739;
+  }
+  
+  body {
+    margin: 5rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #A0C8D2 no-repeat center;
+  }
+  
+  .slider-wrapper {
+    margin: 1rem;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+  }
+  
+  .card-list .card-item {
+    height: auto;
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .card-list .card-item .user-image {
+    width: 90%;
+    height: 150px;
+    border-radius: 10%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+  }
+  
+  .card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: #A68768;
+    font-weight: 500;
+    margin: 14px 0 40px;
+  }
+  
+  .card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+  }
+  
+  .card-list .card-item .message-button:hover {
+    background: #E3C39D;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+  .slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -55px;
+    transition: 0.2s ease;
+  }
+  
+  .slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+  }
+  
+  @media (max-width: 768px) {
+    .slider-wrapper {
+      margin: 0 10px 40px;
+    }
+  
+    .slider-wrapper .swiper-slide-button {
+      display: none;
+    }
+  }
+  
